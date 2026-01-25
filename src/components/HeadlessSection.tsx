@@ -1,62 +1,102 @@
 export default function HeadlessSection() {
   return (
-    <section className="bg-gradient-to-b from-blue-50/30 to-transparent py-16 md:py-24" id="content-1">
+    <section className="bg-gradient-to-b from-navy-primary to-navy-dark py-16 md:py-24" id="content-1">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="max-w-4xl mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold text-black mb-6">
-            Build headless for ultimate control
+          <h2 className="text-3xl md:text-5xl font-bold text-text-off-white mb-6">
+            Businesses are doing everything right and still falling behind
           </h2>
-          <p className="text-lg text-gray-700 opacity-80">
-            Get the store and flexibility your business needs. Choose your own stack and use the tech you already love with no vendor lock-in, or launch in half the time using Index 101 headless stack.
+          <p className="text-lg text-text-off-white opacity-80">
+            Rising costs, fragmented platforms, and limited reach make it harder than ever to grow. Strug changes this by giving businesses direct access to demand across one unified system, without forcing new tools, contracts, or ways of operating.
           </p>
         </div>
 
         {/* Cards Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-          {/* Card 1: Choose your own stack */}
-          <div className="rounded-2xl p-8 bg-white shadow-md border border-black/10">
-            <h3 className="text-2xl font-bold text-black mb-4">Choose your own stack</h3>
-            <p className="text-base text-gray-700 opacity-80 mb-6">
-              Use Index 101 Storefront API with your own framework and language, manage operations in Index 101 backend, or use your API-based ERP, CMS, and 3P integrations.
+          {/* Card 1: Growth is no longer linear */}
+          <div className="glass-card p-8">
+            {/* Video Section - Above heading */}
+            <div className="relative min-h-[200px] mb-6 rounded-lg overflow-hidden">
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="w-full h-full object-cover rounded-lg"
+              >
+                <source src="/videos/headless-left-video.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+
+            <h3 className="text-2xl font-bold text-text-off-white mb-4">Growth is no longer linear</h3>
+            <p className="text-base text-text-off-white opacity-80 mb-6">
+              Businesses can do everything right and still see diminishing returns. Strug changes this by letting businesses participate in multiple types of demand through one presence, allowing growth to come from opportunity rather than constant reinvestment.
             </p>
 
             {/* Sub cards */}
             <div className="space-y-4">
-              <div className="p-4 bg-gray-50 rounded-lg">
-                <h4 className="font-bold text-black mb-2">Flexible architecture</h4>
-                <p className="text-sm text-gray-600">
-                  Build with React, Vue, Angular, or any framework you prefer while leveraging Index 101 powerful commerce engine.
+              <div className="p-4 glass-card-strong rounded-lg">
+                <h4 className="font-bold text-text-off-white mb-2">Demand is unpredictable and hard to plan for</h4>
+                <p className="text-sm text-text-off-white opacity-80">
+                  Seasonality, short notice needs, and shifting consumer behavior make forecasting difficult. Strug allows businesses to respond to demand as it appears, instead of locking into rigid schedules, inventory, or commitments.
                 </p>
               </div>
-              <div className="p-4 bg-gray-50 rounded-lg">
-                <h4 className="font-bold text-black mb-2">API-first approach</h4>
-                <p className="text-sm text-gray-600">
-                  Access comprehensive GraphQL and REST APIs to create custom shopping experiences.
+              <div className="p-4 glass-card-strong rounded-lg">
+                <h4 className="font-bold text-text-off-white mb-2">Expansion usually means risk</h4>
+                <p className="text-sm text-text-off-white opacity-80">
+                  Entering new categories or markets often requires upfront spend and operational change. Strug allows businesses to participate without restructuring, testing new opportunities without putting the core business at risk.
+                </p>
+              </div>
+              <div className="p-4 glass-card-strong rounded-lg">
+                <h4 className="font-bold text-text-off-white mb-2">Scale usually means giving something up</h4>
+                <p className="text-sm text-text-off-white opacity-80">
+                  Growth often comes at the cost of margins, control, or flexibility. Strug allows small businesses to take on more work, when it makes sense, without changing how the business already runs.
                 </p>
               </div>
             </div>
           </div>
 
-          {/* Card 2: Use Index 101 headless stack */}
-          <div className="rounded-2xl p-8 bg-white shadow-md border border-black/10">
-            <h3 className="text-2xl font-bold text-black mb-4">Use Index 101 headless stack</h3>
-            <p className="text-base text-gray-700 opacity-80 mb-6">
-              Launch faster with our purpose-built React framework, and our global hosting solution optimized for commerce.
+          {/* Card 2: Visibility without advertising dependency */}
+          <div className="glass-card p-8">
+            {/* Video Section - Above heading */}
+            <div className="relative min-h-[200px] mb-6 rounded-lg overflow-hidden">
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="w-full h-full object-cover rounded-lg"
+              >
+                <source src="/videos/headless-right-video.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+
+            <h3 className="text-2xl font-bold text-text-off-white mb-4">Visibility without advertising dependency</h3>
+            <p className="text-base text-text-off-white opacity-80 mb-6">
+              Most businesses are forced to pay repeatedly just to be seen. Strug changes this by placing businesses directly into active customer demand across multiple verticals, allowing visibility to come from participation rather than ongoing ad spend.
             </p>
 
             {/* Sub cards */}
             <div className="space-y-4">
-              <div className="p-4 bg-gray-50 rounded-lg">
-                <h4 className="font-bold text-black mb-2">React framework</h4>
-                <p className="text-sm text-gray-600">
-                  Pre-built commerce components, optimized data fetching, and best practices built right in.
+              <div className="p-4 glass-card-strong rounded-lg">
+                <h4 className="font-bold text-text-off-white mb-2">Cash flow breaks businesses, not lack of demand</h4>
+                <p className="text-sm text-text-off-white opacity-80">
+                  Relying on a single platform, location, or audience limits growth. Strug gives businesses access to customers across services, on-demand work, bookings, and commerce through one presence, expanding reach without multiplying tools or effort.
                 </p>
               </div>
-              <div className="p-4 bg-gray-50 rounded-lg">
-                <h4 className="font-bold text-black mb-2">Global hosting</h4>
-                <p className="text-sm text-gray-600">
-                  Deploy your store at no extra cost. Or use your preferred hosting provider.
+              <div className="p-4 glass-card-strong rounded-lg">
+                <h4 className="font-bold text-text-off-white mb-2">Test</h4>
+                <p className="text-sm text-text-off-white opacity-80">
+                  Many businesses do the work but wait weeks or months to get paid, creating pressure even when revenue exists. Strug shortens that gap by structuring transactions and payouts directly through the platform, helping businesses turn completed work into usable cash faster.
+                </p>
+              </div>
+              <div className="p-4 glass-card-strong rounded-lg">
+                <h4 className="font-bold text-text-off-white mb-2">Marketing that rewards activity, not spend</h4>
+                <p className="text-sm text-text-off-white opacity-80">
+                  Traditional marketing favors the biggest budgets, not the best businesses. Strug ties exposure to real engagement and transactions, allowing businesses to grow through performance, participation, and customer interaction rather than paid promotion.
                 </p>
               </div>
             </div>

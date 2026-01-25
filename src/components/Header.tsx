@@ -41,12 +41,12 @@ export default function Header() {
 
   return (
     <header className="font-sans h-0">
-      <div className="after:absolute after:top-0 after:left-0 after:will-change-opacity after:pointer-events-none after:h-full after:w-full after:z-10 after:transition-opacity after:duration-200 w-full z-50 after:bg-black text-white fixed top-0 after:opacity-100 after:border-b after:border-white/20">
+      <div className="glass-nav after:absolute after:top-0 after:left-0 after:will-change-opacity after:pointer-events-none after:h-full after:w-full after:z-10 after:transition-opacity after:duration-200 w-full z-50 text-text-off-white fixed top-0 after:opacity-100">
         <div className="h-[73px] px-4 xl:px-auto flex items-center z-20 relative max-w-[1440px] mx-auto">
           {/* Logo */}
           <Link href="/" className="inline-block shrink-0 mr-16">
             <svg width="104" height="32" viewBox="0 0 104 32" fill="none" className="h-8">
-              <text x="0" y="24" fontSize="24" fontWeight="bold" fill="white">Index 101</text>
+              <text x="0" y="24" fontSize="24" fontWeight="bold" fill="#D6D4D2">Index 101</text>
             </svg>
           </Link>
 
@@ -62,19 +62,19 @@ export default function Header() {
                   >
                     <span className="mr-3">{key}</span>
                     <div className="relative inline-block h-[7px] w-3">
-                      <div className="inline-block rounded border-b-8 h-2 w-[2px] border-white bg-white -translate-x-[3px] rotate-[135deg]"></div>
-                      <div className="inline-block rounded border-b-8 h-2 w-[2px] border-white bg-white -rotate-[135deg]"></div>
+                      <div className="inline-block rounded border-b-8 h-2 w-[2px] border-text-off-white bg-text-off-white -translate-x-[3px] rotate-[135deg]"></div>
+                      <div className="inline-block rounded border-b-8 h-2 w-[2px] border-text-off-white bg-text-off-white -rotate-[135deg]"></div>
                     </div>
                   </button>
                   
                   {/* Dropdown Menu */}
                   {openDropdown === key && (
-                    <ul className="absolute top-[80px] z-[21] py-2 min-w-[240px] bg-white text-black rounded-lg shadow-md whitespace-nowrap">
+                    <ul className="absolute top-[80px] z-[21] py-2 min-w-[240px] glass-card-strong text-text-off-white rounded-lg shadow-lg whitespace-nowrap">
                       {items.map((item, idx) => (
-                        <li key={idx} className={idx === 0 ? 'border-b border-gray-300' : ''}>
+                        <li key={idx} className={idx === 0 ? 'border-b border-muted-blue/30' : ''}>
                           <Link
                             href={item.href}
-                            className="inline-block py-2 px-3 w-full font-bold text-[0.9375rem] hover:bg-gray-300 transition-colors duration-150"
+                            className="inline-block py-2 px-3 w-full font-bold text-[0.9375rem] hover:bg-card-surface/50 transition-colors duration-150"
                           >
                             {item.label}
                           </Link>
@@ -103,9 +103,9 @@ export default function Header() {
               <li>
                 <Link
                   href="#contact-sales"
-                  className="inline-block px-4 py-2.5 rounded-lg text-white bg-transparent border-2 border-white hover:bg-white hover:text-black transition-all duration-150 font-bold whitespace-nowrap"
+                  className="inline-block px-4 py-2.5 rounded-lg text-text-off-white bg-transparent border-2 border-muted-blue/50 hover:bg-button-blue hover:border-button-blue transition-all duration-150 font-bold whitespace-nowrap"
                 >
-                  Get in touch
+                  Get Started
                 </Link>
               </li>
             </ul>
@@ -113,8 +113,8 @@ export default function Header() {
             {/* Mobile Menu */}
             <ul className="flex items-center lg:hidden mr-[-15px]">
               <li>
-                <Link href="#contact-sales" className="whitespace-nowrap hover:underline font-bold text-white underline pr-4">
-                  Get in touch
+                <Link href="#contact-sales" className="whitespace-nowrap hover:underline font-bold text-text-off-white underline pr-4">
+                  Get Started
                 </Link>
               </li>
               <li>
@@ -123,9 +123,9 @@ export default function Header() {
                   aria-label="Menu"
                   onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                 >
-                  <div className="h-0.5 w-[1.125rem] bg-white"></div>
-                  <div className="h-0.5 w-[1.125rem] bg-white"></div>
-                  <div className="h-0.5 w-[1.125rem] bg-white"></div>
+                  <div className="h-0.5 w-[1.125rem] bg-text-off-white"></div>
+                  <div className="h-0.5 w-[1.125rem] bg-text-off-white"></div>
+                  <div className="h-0.5 w-[1.125rem] bg-text-off-white"></div>
                 </button>
               </li>
             </ul>
@@ -135,11 +135,11 @@ export default function Header() {
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="fixed inset-0 bg-black text-white z-50 lg:hidden overflow-y-auto">
-          <div className="h-[73px] container flex items-center border-b border-white/20">
+        <div className="fixed inset-0 bg-navy-dark text-text-off-white z-50 lg:hidden overflow-y-auto">
+          <div className="h-[73px] container flex items-center border-b border-muted-blue/20">
             <Link href="/" className="inline-block shrink-0 mr-16">
               <svg width="104" height="32" viewBox="0 0 104 32" fill="none" className="h-8">
-                <text x="0" y="24" fontSize="24" fontWeight="bold" fill="white">Index 101</text>
+                <text x="0" y="24" fontSize="24" fontWeight="bold" fill="#D6D4D2">Index 101</text>
               </svg>
             </Link>
             <button

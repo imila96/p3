@@ -1,13 +1,12 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import Image from 'next/image';
 
 interface Store {
   id: string;
   name: string;
   url: string;
-  image: string;
+  video: string;
   logo: string;
   type: string;
   typeColor: string;
@@ -25,78 +24,78 @@ export default function ScrollingShowcase() {
       id: 'store1',
       name: 'Index 101',
       url: 'index101.com',
-      image: '/images/stores/braindead.png',
+      video: '/videos/showcase-video-1.mp4',
       logo: '/stores/braindead-logo.svg',
       type: 'Custom Template',
-      typeColor: '#1F51FF'
+      typeColor: '#3C67A6'
     },
     {
       id: 'store2',
       name: 'Index 101',
       url: 'index101.com',
-      image: '/images/stores/swati.png',
+      video: '/videos/showcase-video-2.mp4',
       logo: '/stores/swati-logo.svg',
       type: 'Custom Template',
-      typeColor: '#1F51FF'
+      typeColor: '#3C67A6'
     },
     {
       id: 'store3',
       name: 'Index 101',
       url: 'index101.com',
-      image: '/images/stores/holo-taco.png',
+      video: '/videos/showcase-video-3.mp4',
       logo: '/stores/holotaco-logo.svg',
       type: 'Custom Template',
-      typeColor: '#1F51FF'
+      typeColor: '#3C67A6'
     },
     {
       id: 'store4',
       name: 'Index 101',
       url: 'index101.com',
-      image: '/images/stores/chamberlain.png',
+      video: '/videos/showcase-video-4.mp4',
       logo: '/stores/chamberlain-logo.svg',
       type: 'Custom Template',
-      typeColor: '#1F51FF'
+      typeColor: '#3C67A6'
     },
     {
       id: 'store5',
       name: 'Index 101',
       url: 'index101.com',
-      image: '/images/stores/braindead.png',
+      video: '/videos/showcase-video-5.mp4',
       logo: '/stores/braindead-logo.svg',
       type: 'Custom Template',
-      typeColor: '#1F51FF'
+      typeColor: '#3C67A6'
     },
     {
       id: 'store6',
       name: 'Index 101',
       url: 'index101.com',
-      image: '/images/stores/swati.png',
+      video: '/videos/showcase-video-6.mp4',
       logo: '/stores/swati-logo.svg',
       type: 'Custom Template',
-      typeColor: '#1F51FF'
+      typeColor: '#3C67A6'
     },
     {
       id: 'store7',
       name: 'Index 101',
       url: 'index101.com',
-      image: '/images/stores/holo-taco.png',
+      video: '/videos/showcase-video-7.mp4',
       logo: '/stores/holotaco-logo.svg',
       type: 'Custom Template',
-      typeColor: '#1F51FF'
+      typeColor: '#3C67A6'
     },
     {
       id: 'store8',
       name: 'Index 101',
       url: 'index101.com',
-      image: '/images/stores/chamberlain.png',
+      video: '/videos/showcase-video-8.mp4',
       logo: '/stores/chamberlain-logo.svg',
       type: 'Custom Template',
-      typeColor: '#1F51FF'
+      typeColor: '#3C67A6'
     },
   ];
 
   return (
-    <section className="grid gap-y-8 grid-cols-full text-white bg-transparent pt-0 pb-0 md:pb-8">
+    <section className="grid gap-y-8 grid-cols-full text-text-off-white bg-transparent pt-0 pb-0 md:pb-8">
       <div 
         className={`flex relative w-screen mx-auto gap-6 xl:max-w-[1800px] motion-safe:overflow-hidden motion-reduce:overflow-visible min-h-[552px] transition-opacity ease-in duration-500 ${
           isVisible ? 'opacity-100' : 'opacity-0'
@@ -135,25 +134,28 @@ function StoreCard({ store }: { store: Store }) {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <div className="w-[400px] h-[552px] relative bg-gray-900 overflow-hidden">
-        <Image
-          src={store.image}
-          alt={`Screenshot of the ${store.name} website`}
-          fill
-          className="object-cover"
-        />
+      <div className="w-[400px] h-[552px] relative bg-navy-dark overflow-hidden rounded-lg">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="w-full h-full object-cover"
+        >
+          <source src={store.video} type="video/mp4" />
+        </video>
       </div>
 
       {/* Hover Overlay */}
       <div 
-        className={`flex flex-col items-center justify-center absolute inset-0 bg-black/90 transition-opacity duration-500 ${
+        className={`flex flex-col items-center justify-center absolute inset-0 glass-card-strong transition-opacity duration-500 rounded-lg ${
           isHovered ? 'opacity-100' : 'opacity-0'
         }`}
       >
         <div className="max-w-[80%] mx-auto mb-8">
-          <div className="text-white font-bold text-2xl">{store.name}</div>
+          <div className="text-text-off-white font-bold text-2xl">{store.name}</div>
         </div>
-        <div className="mt-8 flex items-center text-white">
+        <div className="mt-8 flex items-center text-text-off-white">
           <span className="mr-2 text-sm sm:text-lg">{store.url}</span>
           <svg fill="none" viewBox="0 0 20 20" height="12" width="12" className="-rotate-45">
             <path stroke="currentColor" strokeLinecap="round" d="m12.12 4.34 5.59 5.59a.1.1 0 0 1 0 .14l-5.59 5.59M17.78 10H2.22"></path>
@@ -163,10 +165,10 @@ function StoreCard({ store }: { store: Store }) {
 
       {/* Badge */}
       <div 
-        className="absolute bottom-5 left-5 text-white text-[0.8125rem] md:text-[1.125rem] py-2.5 px-4 rounded-full flex items-center gap-2.5"
+        className="absolute bottom-5 left-5 text-text-off-white text-[0.8125rem] md:text-[1.125rem] py-2.5 px-4 rounded-full flex items-center gap-2.5 z-10"
         style={{ backgroundColor: store.typeColor }}
       >
-        <span className="block w-2 h-2 rounded-full bg-white"></span>
+        <span className="block w-2 h-2 rounded-full bg-text-off-white"></span>
         {store.type}
       </div>
     </a>

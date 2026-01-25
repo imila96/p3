@@ -3,15 +3,16 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background: #1F2D43;
+  --foreground: #D6D4D2;
+  --navy-dark: #16212E;
+  --navy-primary: #1F2D43;
+  --navy-slate: #313E53;
+  --card-surface: #3C4A60;
+  --muted-blue: #5B6676;
+  --text-off-white: #D6D4D2;
+  --accent-warm: #906441;
+  --button-blue: #3C67A6;
 }
 
 body {
@@ -36,6 +37,29 @@ body {
   .no-scrollbar {
     -ms-overflow-style: none;
     scrollbar-width: none;
+  }
+
+  /* Glassmorphism utilities */
+  .glass-card {
+    background: rgba(60, 74, 96, 0.4);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(91, 102, 118, 0.3);
+    border-radius: 16px;
+  }
+
+  .glass-card-strong {
+    background: rgba(60, 74, 96, 0.6);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(91, 102, 118, 0.4);
+  }
+
+  .glass-nav {
+    background: rgba(31, 45, 67, 0.8);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(91, 102, 118, 0.2);
   }
 }
 

@@ -1,64 +1,56 @@
-import Image from 'next/image';
-
 export default function CheckoutSection() {
   const checkoutFeatures = [
     {
-      title: 'Best-in-class performance',
-      description: 'Index 101 checkout is optimized for speed, loading 3x faster than the competition on average.',
+      title: 'Clarity without configuration',
+      description: 'People should not need to set up systems to understand how things work. Rules, pricing, and expectations are presented clearly from the start so participation feels natural rather than technical.',
     },
     {
-      title: 'Customization at scale',
-      description: 'Customize your checkout with branding, upsells, and payment options without sacrificing conversion.',
+      title: 'Freedom over interference',
+      description: 'Decisions are left to the people involved, not enforced by rigid controls. The platform steps back, allowing individuals and businesses to agree on terms, accept or decline, and participate without being dictated to.',
     },
     {
-      title: 'Trust and security',
-      description: 'Build customer confidence with trusted payment methods, fraud protection, and secure checkout.',
+      title: 'Fairness is built into the process',
+      description: 'Outcomes are not shaped by hidden rules or last-minute changes. What is agreed to upfront is what both sides move forward with, reducing disputes and uncertainty.',
     },
     {
-      title: 'Out-of-the-box compliance',
-      description: 'Index 101 checkout makes compliance easier, including the new PCI Security Standard for 2025 and regional privacy regulations.',
+      title: 'Movement without friction',
+      description: 'Whether someone is buying, booking, hiring, or accepting work, the process keeps moving without delays, handoffs, or unnecessary steps that slow people down.',
     },
   ];
 
   return (
-    <section className="bg-white py-16 md:py-24 rounded-b-[40px]">
+    <section className="bg-gradient-to-b from-navy-primary via-navy-primary to-navy-primary py-16 md:py-24 rounded-b-[40px]">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="max-w-4xl mb-16">
-          <p className="text-sm font-bold uppercase tracking-wider text-blue-600 mb-4">Checkout</p>
-          <h2 className="text-3xl md:text-5xl font-bold text-black mb-6">
-            The world&apos;s best-converting checkout
+          <h2 className="text-3xl md:text-5xl font-bold text-text-off-white mb-6">
+            FINISH WITH CONFIDENCE
           </h2>
-          <p className="text-lg text-gray-700 opacity-80">
-            With a{' '}
-            <a
-              href="#"
-              target="_blank"
-              rel="noreferrer noopener"
-              className="text-blue-600 hover:underline"
-            >
-              15% higher conversion rate on average
-            </a>
-            , Index 101&apos;s checkout is customizable, lightning-fast, secure, compliant, and trusted by the biggest brands.
+          <p className="text-lg text-text-off-white opacity-80">
+            The final step should never feel uncertain or unfair. Pricing is clear, expectations are set upfront, and what you agree to is exactly what happens. Whether paying or getting paid, completion feels straightforward, calm, and trustworthy for everyone involved.
           </p>
         </div>
 
-        {/* Checkout Image */}
-        <div className="mb-16 relative h-[400px] md:h-[600px] rounded-2xl overflow-hidden">
-          <Image
-            src="/images/checkout-image.jpg"
-            alt="An overlay of code over an image of the Index 101 checkout"
-            fill
-            className="object-cover"
-          />
+        {/* Checkout Video */}
+        <div className="mb-16 relative h-[400px] md:h-[600px] rounded-2xl overflow-hidden glass-card">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-full h-full object-cover"
+          >
+            <source src="/videos/checkout-video.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
         </div>
 
         {/* Features Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {checkoutFeatures.map((feature, index) => (
-            <div key={index} className="rounded-2xl p-8 bg-gray-50">
-              <h3 className="text-xl font-bold text-black mb-3">{feature.title}</h3>
-              <p className="text-base text-gray-700 opacity-80">{feature.description}</p>
+            <div key={index} className="glass-card p-8">
+              <h3 className="text-xl font-bold text-text-off-white mb-3">{feature.title}</h3>
+              <p className="text-base text-text-off-white opacity-80">{feature.description}</p>
             </div>
           ))}
         </div>

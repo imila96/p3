@@ -35,9 +35,30 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        navy: {
+          dark: '#16212E',
+          primary: '#1F2D43',
+          slate: '#313E53',
+        },
+        card: {
+          surface: '#3C4A60',
+        },
+        muted: {
+          blue: '#5B6676',
+        },
+        text: {
+          'off-white': '#D6D4D2',
+        },
+        accent: {
+          warm: '#906441',
+        },
+        button: {
+          blue: '#3C67A6',
+        },
       },
       backgroundImage: {
-        'hero-gradient': 'linear-gradient(180deg, #000 0%, #071C52 100%)',
+        'hero-gradient': 'linear-gradient(180deg, #16212E 0%, #1F2D43 100%)',
+        'soft-gradient': 'linear-gradient(135deg, rgba(31, 45, 67, 0.8) 0%, rgba(22, 33, 46, 0.9) 100%)',
       },
     },
   },

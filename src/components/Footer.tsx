@@ -35,7 +35,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-black text-white pt-16 pb-8">
+    <footer className="bg-navy-dark text-text-off-white pt-16 pb-8">
       <div className="container mx-auto max-w-[1440px] px-4">
         {/* Newsletter Section */}
         <div className="mb-16">
@@ -49,9 +49,9 @@ export default function Footer() {
             <input
               type="email"
               placeholder="Email address"
-              className="flex-1 px-4 py-3 rounded-lg bg-white/10 border border-white/20 focus:outline-none focus:border-white"
+              className="flex-1 px-4 py-3 rounded-lg glass-card border border-muted-blue/30 focus:outline-none focus:border-button-blue text-text-off-white placeholder:text-text-off-white/50"
             />
-            <button className="px-6 py-3 rounded-lg bg-white text-black font-bold hover:bg-gray-200 transition-colors">
+            <button className="px-6 py-3 rounded-lg bg-button-blue text-text-off-white font-bold hover:bg-button-blue/80 transition-colors">
               Subscribe
             </button>
           </div>
@@ -79,7 +79,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-white/20 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+        <div className="border-t border-muted-blue/30 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="flex items-center gap-6">
             <Link href="#" className="text-sm opacity-80 hover:opacity-100">
               Terms of Service
