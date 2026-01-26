@@ -18,14 +18,14 @@ export default function IntegrationsSection() {
   ];
 
   return (
-    <section className="bg-gradient-to-b from-navy-primary via-navy-primary to-navy-dark py-16 md:py-24 overflow-hidden pb-32">
+    <section className="bg-[#F0F3F7] py-16 md:py-24 overflow-hidden">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="max-w-4xl mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold text-text-off-white mb-6">
+          <h2 className="text-3xl md:text-5xl font-bold text-[#1A3A60] mb-6">
             CONNECTED BY DESIGN
           </h2>
-          <p className="text-lg text-text-off-white opacity-80">
+          <p className="text-lg text-[#4A5568]">
             Strug works alongside how people and businesses already live and operate. Instead of forcing change or replacement, it brings everyday activity, work, services, and commerce into one shared flow, supported quietly in the background so participation feels natural, stable, and uninterrupted wherever you are.
           </p>
         </div>
@@ -33,7 +33,7 @@ export default function IntegrationsSection() {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
           {/* Left side: Video */}
           <div className="md:col-span-5 flex flex-col gap-8">
-            <div className="relative h-[400px] glass-card rounded-2xl overflow-hidden">
+            <div className="relative h-[400px] bg-white rounded-2xl overflow-hidden shadow-lg">
               <video
                 autoPlay
                 loop
@@ -50,9 +50,9 @@ export default function IntegrationsSection() {
           {/* Right side: Integration cards */}
           <div className="md:col-span-7 flex flex-col gap-6">
             {integrations.map((integration, index) => (
-              <div key={index} className="glass-card p-8">
-                <h3 className="text-2xl font-bold text-text-off-white mb-4">{integration.title}</h3>
-                <p className="text-base text-text-off-white opacity-80">{integration.description}</p>
+              <div key={index} className="bg-white p-8 rounded-2xl shadow-lg">
+                <h3 className="text-2xl font-bold text-[#1A3A60] mb-4">{integration.title}</h3>
+                <p className="text-base text-[#4A5568]">{integration.description}</p>
               </div>
             ))}
           </div>
@@ -61,10 +61,10 @@ export default function IntegrationsSection() {
         {/* Apps section */}
         <div className="mt-24">
           <div className="max-w-4xl mb-12">
-            <h2 className="text-3xl md:text-5xl font-bold text-text-off-white mb-6">
+            <h2 className="text-3xl md:text-5xl font-bold text-[#1A3A60] mb-6">
               More paths open as you need them
             </h2>
-            <p className="text-lg text-text-off-white opacity-80">
+            <p className="text-lg text-[#4A5568]">
               Strug is not limited to a single way of doing things. As needs change, new opportunities already exist within the platform, from work and services to commerce, learning, care, and community. Instead of adding tools or searching elsewhere, people and businesses can move into what they need next, all within the same system, without losing momentum or starting over.
             </p>
           </div>

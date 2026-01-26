@@ -15,15 +15,15 @@ export default function SolutionsFeatures() {
   ];
 
   return (
-    <section className="bg-navy-primary py-16 md:py-24">
+    <section className="bg-[#F0F3F7] py-16 md:py-24">
       <div className="container mx-auto max-w-[1440px] px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {features.map((feature, index) => (
-            <div key={index} className="text-left glass-card p-6 rounded-2xl">
-              <h3 className="text-2xl md:text-3xl font-bold text-text-off-white mb-4">
+            <div key={index} className="text-left bg-white p-6 rounded-2xl shadow-lg">
+              <h3 className="text-2xl md:text-3xl font-bold text-[#1A3A60] mb-4">
                 {feature.title}
               </h3>
-              <p className="text-base md:text-lg text-text-off-white opacity-80 leading-relaxed">
+              <p className="text-base md:text-lg text-[#4A5568] leading-relaxed">
                 {feature.description}
               </p>
             </div>

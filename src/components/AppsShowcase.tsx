@@ -18,7 +18,7 @@ export default function AppsShowcase() {
 
   return (
     <div className="container mx-auto px-4 py-8">
-      <div className="bg-gradient-to-b from-navy-dark via-navy-primary to-navy-primary rounded-3xl relative overflow-hidden -mt-16">
+      <div className="bg-white rounded-3xl relative overflow-hidden shadow-lg">
         <div className="relative z-10 py-24">
           {/* Scrolling Videos */}
           <div className="overflow-hidden">
@@ -28,7 +28,7 @@ export default function AppsShowcase() {
                   key={index}
                   className="app-item shrink-0 group"
                 >
-                  <div className="w-20 h-20 md:w-24 md:h-24 glass-card rounded-lg overflow-hidden hover:scale-110 transition-transform duration-300">
+                  <div className="w-20 h-20 md:w-24 md:h-24 bg-[#F0F3F7] rounded-lg overflow-hidden hover:scale-110 transition-transform duration-300 shadow-md">
                     <video
                       autoPlay
                       loop
@@ -47,7 +47,7 @@ export default function AppsShowcase() {
         </div>
 
         {/* Gradient overlay on edges */}
-        <div className="absolute top-0 z-20 w-full h-full rounded-3xl pointer-events-none bg-gradient-to-r from-navy-primary via-transparent to-navy-primary"></div>
+        <div className="absolute top-0 z-20 w-full h-full rounded-3xl pointer-events-none bg-gradient-to-r from-white via-transparent to-white"></div>
       </div>
     </div>
   );

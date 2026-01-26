@@ -19,20 +19,20 @@ export default function CheckoutSection() {
   ];
 
   return (
-    <section className="bg-gradient-to-b from-navy-primary via-navy-primary to-navy-primary py-16 md:py-24 rounded-b-[40px]">
+    <section className="bg-gradient-to-b from-[#F0F3F7] via-[#F0F3F7] to-[#0b1d42] py-16 md:py-24 rounded-b-[40px] pb-32">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="max-w-4xl mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold text-text-off-white mb-6">
+          <h2 className="text-3xl md:text-5xl font-bold text-[#1A3A60] mb-6">
             FINISH WITH CONFIDENCE
           </h2>
-          <p className="text-lg text-text-off-white opacity-80">
+          <p className="text-lg text-[#4A5568]">
             The final step should never feel uncertain or unfair. Pricing is clear, expectations are set upfront, and what you agree to is exactly what happens. Whether paying or getting paid, completion feels straightforward, calm, and trustworthy for everyone involved.
           </p>
         </div>
 
         {/* Checkout Video */}
-        <div className="mb-16 relative h-[400px] md:h-[600px] rounded-2xl overflow-hidden glass-card">
+        <div className="mb-16 relative h-[400px] md:h-[600px] rounded-2xl overflow-hidden bg-white shadow-lg">
           <video
             autoPlay
             loop
@@ -48,9 +48,9 @@ export default function CheckoutSection() {
         {/* Features Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {checkoutFeatures.map((feature, index) => (
-            <div key={index} className="glass-card p-8">
-              <h3 className="text-xl font-bold text-text-off-white mb-3">{feature.title}</h3>
-              <p className="text-base text-text-off-white opacity-80">{feature.description}</p>
+            <div key={index} className="bg-white p-8 rounded-2xl shadow-lg">
+              <h3 className="text-xl font-bold text-[#1A3A60] mb-3">{feature.title}</h3>
+              <p className="text-base text-[#4A5568]">{feature.description}</p>
             </div>
           ))}
         </div>

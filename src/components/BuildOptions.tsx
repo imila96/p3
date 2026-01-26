@@ -3,7 +3,7 @@
 export default function BuildOptions() {
   return (
     <div className="bg-navy-primary">
-      <section className="grid gap-y-8 grid-cols-full pb-0 bg-navy-primary text-text-off-white md:rounded-t-[40px] pt-[140px] md:pt-[198px]">
+      <section className="grid gap-y-8 grid-cols-full pb-0 bg-gradient-to-b from-navy-primary via-navy-primary to-[#F0F3F7] text-text-off-white md:rounded-t-[40px] pt-[140px] md:pt-[198px] pb-24">
         <div className="container mx-auto max-w-[1440px] px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             {/* Left Column - Text Content */}

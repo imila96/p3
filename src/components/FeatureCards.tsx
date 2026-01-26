@@ -17,7 +17,7 @@ export default function FeatureCards() {
   ];
 
   return (
-    <div className="bg-hero-gradient pb-8 md:pb-16">
+    <div className="bg-hero-gradient pb-16 md:pb-24">
       <div className="container mx-auto max-w-[1440px] px-4">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 z-10">
           {features.map((feature, index) => (

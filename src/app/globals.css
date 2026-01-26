@@ -13,6 +13,12 @@
   --text-off-white: #D6D4D2;
   --accent-warm: #906441;
   --button-blue: #3C67A6;
+  --navy-900: #0b1d42;
+  --navy-800: #10264a;
+  --navy-700: #3f4b5f;
+  --accent: #dcd9ad;
+  --text-on-dark: rgba(255,255,255,0.95);
+  --muted-on-dark: rgba(255,255,255,0.82);
 }
 
 body {

@@ -58,11 +58,11 @@ export default function OutOfBoxFeatures() {
   ];
 
   return (
-    <section className="bg-navy-primary py-16 md:py-24">
+    <section className="bg-[#F0F3F7] py-16 md:py-24">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="max-w-4xl mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold text-text-off-white mb-6">
+          <h2 className="text-3xl md:text-5xl font-bold text-[#1A3A60] mb-6">
             Built for real life, in every form
           </h2>
         </div>
@@ -70,10 +70,10 @@ export default function OutOfBoxFeatures() {
         {/* Features Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {features.map((feature, index) => (
-            <div key={index} className="glass-card p-6">
+            <div key={index} className="bg-white p-6 rounded-2xl shadow-lg">
               <div className="text-5xl mb-4">{feature.icon}</div>
-              <h3 className="text-xl font-bold text-text-off-white mb-3">{feature.title}</h3>
-              <p className="text-base text-text-off-white opacity-80">{feature.description}</p>
+              <h3 className="text-xl font-bold text-[#1A3A60] mb-3">{feature.title}</h3>
+              <p className="text-base text-[#4A5568]">{feature.description}</p>
             </div>
           ))}
         </div>
