@@ -29,17 +29,6 @@ export default function Footer() {
     { label: 'Strug Plus', href: '#' },
     { label: 'Strug for Enterprise', href: '#' },
   ];
-  const globalImpactLinks = [
-    { label: 'Sustainability', href: '#' },
-    { label: 'Build Black', href: '#' },
-    { label: 'Accessibility', href: '#' },
-  ];
-  const solutionsLinks = [
-    { label: 'Online Store Builder', href: '#' },
-    { label: 'Website Builder', href: '#' },
-    { label: 'Ecommerce Website', href: '#' },
-  ];
-
   const Column = ({ title, links }: { title: string; links: { label: string; href: string }[] }) => (
     <div>
       <h4 className="text-sm text-white mb-4 font-normal tracking-tight">{title}</h4>
@@ -57,38 +46,34 @@ export default function Footer() {
 
   return (
     <footer className="bg-black text-white pt-14 pb-10">
-      <div className="site-content">
-        {/* Top: Logo + 4 columns */}
-        <div className="flex flex-wrap gap-x-12 gap-y-10 pb-10">
-          {/* Logo */}
-          <Link href="/" className="flex items-center shrink-0 mb-2">
-            <span className="relative inline-flex items-center justify-center w-8 h-8 mr-2 text-white">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" className="text-white">
-                <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z" />
-                <line x1="3" y1="6" x2="21" y2="6" />
-                <path d="M16 10a4 4 0 01-8 0" />
-              </svg>
-              <span className="absolute text-[11px] font-normal text-white leading-none mt-0.5" style={{ fontFamily: 'inherit' }}>S</span>
-            </span>
-            <span className="text-xl font-normal text-white tracking-tight">Strug</span>
-          </Link>
+        <div className="site-content flex flex-col items-center w-full">
+        {/* Centered content — narrower block + centered flex so items sit in the middle */}
+        <div className="w-full max-w-4xl mx-auto flex flex-col items-center">
+          {/* Top: Logo + 4 columns — centered as a group */}
+          <div className="flex flex-wrap gap-x-12 gap-y-10 pb-10 justify-center">
+            {/* Logo */}
+            <Link href="/" className="flex items-center shrink-0 mb-2">
+              <span className="relative inline-flex items-center justify-center w-8 h-8 mr-2 text-white">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" className="text-white">
+                  <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z" />
+                  <line x1="3" y1="6" x2="21" y2="6" />
+                  <path d="M16 10a4 4 0 01-8 0" />
+                </svg>
+                <span className="absolute text-[11px] font-normal text-white leading-none mt-0.5" style={{ fontFamily: 'inherit' }}>S</span>
+              </span>
+              <span className="text-xl font-normal text-white tracking-tight">Strug</span>
+            </Link>
 
-          <div className="flex flex-wrap gap-x-12 gap-y-10 flex-1">
-            <Column title="Strug" links={strugLinks} />
-            <Column title="Support" links={supportLinks} />
-            <Column title="Developers" links={developersLinks} />
-            <Column title="Products" links={productsLinks} />
+            <div className="flex flex-wrap gap-x-12 gap-y-10 justify-center">
+              <Column title="Strug" links={strugLinks} />
+              <Column title="Support" links={supportLinks} />
+              <Column title="Developers" links={developersLinks} />
+              <Column title="Products" links={productsLinks} />
+            </div>
           </div>
-        </div>
 
-        {/* Middle: Global Impact + Solutions */}
-        <div className="flex flex-wrap gap-x-12 gap-y-10 pb-10">
-          <Column title="Global Impact" links={globalImpactLinks} />
-          <Column title="Solutions" links={solutionsLinks} />
-        </div>
-
-        {/* Bottom: separator, legal + social */}
-        <div className="border-t border-white/20 pt-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+          {/* Bottom: separator, legal + social */}
+          <div className="border-t border-white/20 pt-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
           <div className="flex flex-wrap items-center gap-6 text-sm text-white/80">
             <button type="button" className="flex items-center gap-1.5 hover:text-white transition-colors">
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
@@ -131,10 +116,11 @@ export default function Footer() {
               <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden><path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.162-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.401.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.354-.629-2.758-1.379l-.749 2.848c-.269 1.045-1.004 2.352-1.498 3.146 1.123.345 2.306.535 3.55.535 6.607 0 11.985-5.365 11.985-11.987C23.97 5.39 18.592.026 11.985.026L12.017 0z"/></svg>
             </Link>
           </div>
-        </div>
+          </div>
 
-        <div className="text-center mt-8 text-sm text-white/60">
-          © {new Date().getFullYear()} Strug. All rights reserved.
+          <div className="text-center mt-8 text-sm text-white/60">
+            © {new Date().getFullYear()} Strug. All rights reserved.
+          </div>
         </div>
       </div>
     </footer>
