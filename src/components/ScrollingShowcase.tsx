@@ -95,13 +95,14 @@ export default function ScrollingShowcase() {
   ];
 
   return (
-    <section className="grid gap-y-8 grid-cols-full text-text-off-white bg-transparent pt-0 pb-0 md:pb-8">
+    <section className="grid gap-y-8 grid-cols-full text-text-off-white pt-0 pb-0 md:pb-8">
       <div 
         className={`flex relative w-screen mx-auto gap-6 xl:max-w-[1800px] motion-safe:overflow-hidden motion-reduce:overflow-visible min-h-[552px] transition-opacity ease-in duration-500 ${
           isVisible ? 'opacity-100' : 'opacity-0'
         }`}
         style={{
-          maskImage: 'linear-gradient(90deg, transparent 1%, rgb(0,0,0) 7%, rgb(0,0,0) 93%, transparent 99%)'
+          maskImage: 'linear-gradient(90deg, transparent 0%, rgba(0,0,0,0.4) 4%, black 10%, black 90%, rgba(0,0,0,0.4) 96%, transparent 100%)',
+          WebkitMaskImage: 'linear-gradient(90deg, transparent 0%, rgba(0,0,0,0.4) 4%, black 10%, black 90%, rgba(0,0,0,0.4) 96%, transparent 100%)',
         }}
       >
         {/* First Set of Stores */}
@@ -153,7 +154,7 @@ function StoreCard({ store }: { store: Store }) {
         }`}
       >
         <div className="max-w-[80%] mx-auto mb-8">
-          <div className="text-text-off-white font-bold text-2xl">{store.name}</div>
+          <div className="text-text-off-white font-normal text-2xl">{store.name}</div>
         </div>
         <div className="mt-8 flex items-center text-text-off-white">
           <span className="mr-2 text-sm sm:text-lg">{store.url}</span>

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import Header from "@/components/Header";
 
 export const metadata: Metadata = {
   title: "Online Storefronts - Index 101",
@@ -14,7 +15,8 @@ export default function RootLayout({
   return (
     <html lang="en-CA">
       <body className="overscroll-y-none">
-        <main role="main" id="main" tabIndex={-1} className="focus-visible:outline-none">
+        <Header />
+        <main role="main" id="main" tabIndex={-1} className="focus-visible:outline-none pt-[73px]">
           {children}
         </main>
       </body>

@@ -7,7 +7,7 @@ export default function FinalCTA() {
       style={{
         background: 'linear-gradient(180deg, #02050c 0%, #0b1d42 40%, #10264a 100%)',
         color: 'rgba(255,255,255,0.95)',
-        padding: '80px 40px',
+        padding: '80px 0',
         position: 'relative',
         overflow: 'hidden'
       }}
@@ -20,10 +20,10 @@ export default function FinalCTA() {
         }}
       ></div>
 
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="site-content relative z-10">
         <div className="max-w-3xl mx-auto text-center">
           <h2 
-            className="text-3xl md:text-5xl font-extrabold mb-6"
+            className="text-3xl md:text-5xl font-normal mb-6"
             style={{ 
               color: 'rgba(255,255,255,0.95)', 
               fontSize: '36px',
@@ -48,7 +48,7 @@ export default function FinalCTA() {
           <div className="flex flex-wrap gap-4 justify-center">
             <Link
               href="#contact-sales"
-              className="inline-block font-bold transition-colors"
+              className="inline-block font-normal transition-colors"
               style={{
                 background: '#dcd9ad',
                 color: '#0b1d42',

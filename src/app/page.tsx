@@ -1,7 +1,7 @@
 import Hero from "@/components/Hero";
 import ScrollingShowcase from "@/components/ScrollingShowcase";
 import FeatureCards from "@/components/FeatureCards";
-import WaysToBuild from "@/components/WaysToBuild";
+import { WaysToBuildIntro } from "@/components/WaysToBuild";
 import BuildOptions from "@/components/BuildOptions";
 import SolutionsFeatures from "@/components/SolutionsFeatures";
 import ThemesSection from "@/components/ThemesSection";
@@ -12,14 +12,20 @@ import AppsShowcase from "@/components/AppsShowcase";
 import CheckoutSection from "@/components/CheckoutSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import FinalCTA from "@/components/FinalCTA";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
     <>
       <Hero />
-      <ScrollingShowcase />
-      <FeatureCards />
-      <WaysToBuild />
+      <div
+        className="overflow-visible pb-0"
+        style={{ background: "linear-gradient(180deg, #16212E 0%, #1F2D43 100%)" }}
+      >
+        <ScrollingShowcase />
+        <FeatureCards />
+        <WaysToBuildIntro />
+      </div>
       <BuildOptions />
       <SolutionsFeatures />
       <ThemesSection />
@@ -30,6 +36,7 @@ export default function Home() {
       <CheckoutSection />
       <TestimonialsSection />
       <FinalCTA />
+      <Footer />
     </>
   );
 }
